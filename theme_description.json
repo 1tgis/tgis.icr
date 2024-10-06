@@ -1,0 +1,8 @@
+{
+    "ThemeId": "tgis.icr",
+    "Name": "ICR",
+    "Author": "tgis",
+    "Description": "Theme for Racing League ICR",   
+    "Version": "1.0"	,
+    "DefaultLocalizationId": "en-GB"
+}
