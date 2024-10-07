@@ -1,0 +1,54 @@
+{
+    "ComponentName": "TeamLineCellComponent",
+    "BlockType": "dock",
+    "PaddingLeft": 12,
+    "PaddingRight": 4,
+    "Background": "{BackgroundDefault}",
+    "ColorizeBackground": {
+        "Enabled": false,
+        "Color": "#FFFF00",
+        "BlendPercentage": 10
+    },
+    "Triggers": [
+        {
+            "Condition": "{ItemIndex, Converter=NumberEquals, Parameter=0}",
+            "Property": "ColorizeBackground.Enabled",
+            "Value": true
+        }
+    ],
+    "Items": [
+        //left part
+        {
+            "BlockType": "stack",
+            "HorizontalAlignment": "Left",
+            "VerticalAlignment": "Center",
+            "Items": [
+                //logo
+                {
+                    "BlockType": "image",
+                    "MarginLeft": 12,
+                    "Height": 48,
+                    "MarginRight": 20,
+                    "VerticalAlignment": "Center",
+                    "ImageOptions": {
+                        "Path": "{Item.Team.LogotypePath}",
+                        "VerticalAlignment": "Center"
+                    }
+                },
+
+                //name
+                {
+                    "BlockType": "text",
+                    "MaxWidth": 600,
+                    "Height": 60,
+                    "Source": "{Item.Team.Name}",
+                    "Foreground": "{Item.Team.Color}",
+                    "HorizontalAlignment": "Left",
+                    "VerticalAlignment": "Center",
+                    "FontName": "{FontNameWide}",
+                    "FontSize": 42
+                }
+            ]
+        }
+    ]
+}

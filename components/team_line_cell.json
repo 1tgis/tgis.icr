@@ -1,0 +1,72 @@
+{
+    "BlockType": "dock",
+    "Background": "{BackgroundDefault}",
+    "ColorizeBackground": {
+        "Enabled": false,
+        "Color": "#FFFF00",
+        "BlendPercentage": 10
+    },
+    "Triggers": [
+        {
+            "Condition": "{ItemIndex, Converter=NumberEquals, Parameter=0}",
+            "Property": "ColorizeBackgroundOptions.Enabled",
+            "Value": true
+        }
+    ],
+    "Items": [
+        {
+            "BlockType": "stack",
+            "HorizontalAlignment": "Left",
+            "VerticalAlignment": "Center",
+            "Items": [
+                //color
+                {                    
+                    "BlockType": "shape",
+                    "VerticalAlignment": "Center",
+                    "Width" : 20,
+                    "Height": 70,
+                    "ShapeOptions" : 
+                    {
+                        "Type" : "Rectangle",
+                        "Fill" : "{Item.Team.Color}"
+                    }                    
+                }                
+            ]
+        },
+        //left part
+        {
+            "BlockType": "stack",                    
+            "HorizontalAlignment": "Left",
+            "VerticalAlignment": "Center",
+            "Items": [
+                //logo
+                {
+                    "BlockType": "image",
+                    "MarginLeft" : 12,
+                    "Height": 48,
+                    "MarginRight": 20,
+                    "VerticalAlignment": "Center",
+                    "ImageOptions": {
+                        "Path": "{Item.Team.LogoPath}",
+                        "VerticalAlignment": "Center"
+                    }
+                },
+
+                //name
+                {
+                    "BlockType": "text",
+                    "MaxWidth": 600,
+                    "Foreground": "#FFFFFF",                    
+                    "Source": "{Item.Team.Name}",
+                    "HorizontalAlignment": "Left",
+                    "VerticalAlignment": "Center",
+                    "FontName": "{FontNameDefault}",
+                    "FontSize": 42,
+                }               
+            ]
+        }
+
+        //right part
+        
+    ]
+}

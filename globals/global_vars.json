@@ -1,0 +1,57 @@
+{
+    "FontNameDefault": "Archivo_SemiCondensed-Regular",
+    "FontNameWide": "NoizeSportFreeVertion-Regular",
+    "FontNameBold": "Archivo_SemiCondensed-ExtraBold",
+    "FontNameItalic": "Archivo_SemiCondensed-Light",
+    "FontNameBlack": "Archivo_Expanded-Bold",
+    "NameBlack1": "NoizeSportFreeVertion-Regular",
+    "FontSizeDefault": 20,
+    "ForegroundDefault": "#FFFFFF",
+    "ForegroundAlt": "#FFFFFF",
+    "ForegroundT2": "#7E41D4",
+    "BackgroundDefault": "#4D000000",
+
+    //Data
+    "BackgroundData": "#c6ab00",
+    "ForegroundData": "#232323",
+    //Winners
+    "BackgroundWinner": "#404040",
+    //Promo
+    "BackgroundPromo": "#009ac6",
+    "ForegroundPromo": "#232323",
+
+    //margins
+    "MarginRoot": "64, 40, 48, 40",
+    "MarginTable": "0, 0",
+
+    //colors
+    "ForegroundDarker": "#FF969696",
+    "TableColumnHeaderForeground": "#AABBBBBB",
+    "PenaltyTimeGameForeground": "#DA0200",
+    "PenaltyTimeStewardsForeground": "#ff5858",
+    "FastestLapRaceSelectedForeground": "#DC46DC",
+    "FastestLapRaceStickerBackground": "#b700ff",
+    "DriverDayRaceStickerBackground": "#f76a76",
+    "FastestLapQualSelectedForeground": "#CC25CC",
+    "StandingsPointsForeground": "#c7c7c7",
+    "Standings1stCountForeground": "#D2B200",
+    "Standings2ndCountForeground": "#AEB6BF",
+    "Standings3rdCountForeground": "#BA957B",
+    "StandingsFastestLapCountForeground": "#C46AC4",
+    "StandingsPoleCountForeground": "#E046E0",
+    "StandingsPenaltyPointCountForeground": "#BC0505",
+    "SeasonProgressPositionDefaultForeground": "#999999",
+    "SeasonProgressPositionNotClassifiedForeground": "#999999",
+    "SeasonProgressPositionWorstEventForeground": "#00000",
+    "SeasonProgressPositionTop10Foreground": "#CCCCCC",
+    "SeasonProgressPositionTop1Foregound": "#DDDD11",
+    "SeasonProgressPointsForeground": "#AFAFAF",
+    "SeasonProgressPointsZeroForeground": "#666666",
+    "SeasonProgressPointsTopForeground": "#C2C2C2",
+    "SeasonProgressPointsFastestLapForeground": "#C719C7",
+    "SeasonProgressPointsPoleBackground": "#8182ff",
+    "NonChampRace": "#028CD6",
+
+    "StintsBarHeight" : "36",
+    "StintsBarPositionY" : ""
+}

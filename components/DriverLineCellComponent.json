@@ -1,0 +1,111 @@
+{
+    "ComponentName": "DriverLineCellComponent",
+    "BlockType": "dock",
+    "PaddingLeft": 12,
+    "PaddingRight": 4,
+    "Background": "{BackgroundDefault}",
+    "ColorizeBackground": {
+        "Enabled": false,
+        "Color": "#000000",
+        "BlendPercentage": 50
+    },
+    "Triggers": [
+        {
+            "Condition": "{ItemIndex, Converter=NumberEquals, Parameter=0}",
+            "Property": "ColorizeBackground.Enabled",
+            "Value": true
+        }
+    ],
+    "Items": [
+        {
+            "BlockType": "stack",
+            "Orientation": "Vertical",
+            "Items": [
+                {
+                    "BlockType": "stack",
+                    "HorizontalAlignment": "Left",
+                    "VerticalAlignment": "Center",
+                    "PaddingBottom": 0,
+                    "Items": [
+                        //flag
+                        {
+                            "BlockType": "image",
+                            "Height": 48,
+                            "MarginRight": 12,
+                            "VerticalAlignment": "Center",
+                            "ImageOptions": {
+                                "Path": "{Item.Driver.Nationality.LogotypePath}"
+                            }
+                        },
+        
+                        //name
+                        {
+                            "BlockType": "text",
+                            "MaxWidth": 800,
+                            "MarginLeft": 8,
+                            "Height": 60,
+                            "Source": "{Item.Driver.Name}",
+                            "HorizontalAlignment": "Left",
+                            "VerticalAlignment": "Center",
+                            "FontName": "{FontNameWide}",
+                            "FontSize": 42
+                        }
+                    ]
+                },
+                //team part
+                {
+                    "BlockType": "stack",
+                    "Orientation": "Vertical",
+                    "Height": "*",
+                    "MarginLeft": 0,
+                    "HorizontalAlignment": "Left",
+                    "VerticalAlignment": "Center",
+                    "Items": [
+                        //teams block
+                        {
+                            "BlockType": "stack",
+                            "VerticalAlignment": "Bottom",
+                            "Spacing": 8,
+                            "RenderIf": "{Season.LineupsBasedType, Converter=StringEquals, Parameter=Teams}",
+                            "Items": [
+                                //logo
+                                {
+                                    "BlockType": "image",
+                                    "Height": 40,
+                                    "MarginRight": 0,
+                                    "VerticalAlignment": "Center",
+                                    "UseBackgroundCrop": true,
+                                    "ImageOptions": {
+                                        "Path": "{Item.Team.LogotypePath}",
+                                        "VerticalAlignment": "Center"
+                                    },
+                                    "StretchHeight": false,
+                                    "MaxHeight": 80,
+                                },
+                                //name
+                                {
+                                    "BlockType": "text",
+                                    "Source": "{Item.Team.Name}",
+                                    //"MarginRight": 4,
+                                    "HorizontalAlignment": "Left",
+                                    "VerticalAlignment": "Center",
+                                    "Foreground": "{Item.Team.Color}",
+                                    "FontName": "{FontNameWide}",
+                                    "FontSize": 22,
+                                    "TextOptions": {
+                                        "VerticalAlignment": "Center"
+                                    },
+                                },
+
+                            ]
+                        }
+                    ]
+                }    
+            ]
+        },
+        
+        
+           
+    ]
+}
+        

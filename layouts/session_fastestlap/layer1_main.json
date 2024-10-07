@@ -1,0 +1,160 @@
+{
+    "BlockRoot": {
+        "BlockType": "stack",
+        "Orientation": "Vertical",
+        "Height": "800",
+        "Width": "800",
+        "Margin": "0,0,0,128",
+        "Items": [
+            {
+                "BlockType": "image",
+                "Source": "{Session.Track.Nation.LogotypePath}",
+                "Height": 124,
+                "Width":"auto",
+                "HorizontalAlignment": "Center",
+            },
+            {
+                "BlockType": "stack",
+                "Orientation": "Vertical",
+                "HorizontalAlignment": "Center",
+                "PaddingBottom": 128,
+                "Items": [
+                    {
+                        "Name": "txt1",
+                        "BlockType": "text",
+                        "FontName": "{FontNameWide}",
+                        "Source": "{Session.FastestLapDriver.Name, Converter=StringToUpperString}",
+                        "VerticalAlignment": "Bottom",
+                        "Foreground": "#FFFF00",
+                        "HorizontalAlignment": "Center",
+                        "FontSize": 64
+                    },
+                    {
+                        "BlockType": "stack",
+                        "Orientation": "Horizontal",
+                        "Items": [
+                            {
+                                "Name": "txt1",
+                                "BlockType": "text",
+                                "FontName": "{FontNameWide}",
+                                "Source": "SETS THE FASTEST LAP IN",
+                                "VerticalAlignment": "Bottom",
+                                "HorizontalAlignment": "Center",
+                                "Foreground": "#FFFF00",
+                                "FontSize": 32
+                            },
+                            {
+                                "Name": "txt1",
+                                "BlockType": "text",
+                                "FontName": "{FontNameWide}",
+                                "Source": " {Session.Track.CountryName, Converter=StringToUpperString}",
+                                "VerticalAlignment": "Bottom",
+                                "Foreground": "#FFFFFF",
+                                "FontSize": 32
+                            },
+                        ]
+                    }
+                ]
+            },
+            {
+                "BlockType": "stack",
+                "Orientation": "Vertical",
+                "HorizontalAlignment": "Center",
+                "Width": "*",
+                "Height": 270,
+                "Items": [
+                    {
+                        "Name": "txt1",
+                        "BlockType": "text",
+                        "FontName": "{FontNameWide}",
+                        "Source": "{Session.FastestLapTime}",
+                        "HorizontalAlignment": "Center",
+                        "VerticalAlignment": "Bottom",
+                        "Foreground": "{FastestLapRaceSelectedForeground}",
+                        "FontSize": 72
+                    },
+                    {
+                        "BlockType": "stack",
+                        "Orientation": "Horizontal",
+                        "HorizontalAlignment": "Center",
+                        "Items": [
+                            {
+                                "Name": "txt1",
+                                "BlockType": "text",
+                                "FontName": "{FontNameWide}",
+                                "Source": "ON",
+                                "VerticalAlignment": "Bottom",
+                                "Foreground": "#FFFFFF",
+                                "FontSize": 72
+                            },
+                            {
+                                "Name": "txt1",
+                                "BlockType": "text",
+                                "FontName": "{FontNameWide}",
+                                "Source": " {Session.FastestLapTyres, Converter=StringToUpperString}",
+                                "VerticalAlignment": "Bottom",
+                                "Foreground": "#FFFFFF",
+                                "FontSize": 72,
+                                "Triggers": [
+                                    {
+                                        "Condition": "{Session.FastestLapTyres, Converter=StringEquals, Parameter=Soft}",
+                                        "Property": "Foreground",
+                                        "Value": "#FF0000"
+                                    },
+                                    {
+                                        "Condition": "{Session.FastestLapTyres, Converter=StringEquals, Parameter=Medium}",
+                                        "Property": "Foreground",
+                                        "Value": "#FFFF00"
+                                    },
+                                    {
+                                        "Condition": "{Session.FastestLapTyres, Converter=StringEquals, Parameter=Hard}",
+                                        "Property": "Foreground",
+                                        "Value": "#d9d9d9"
+                                    },
+                                    {
+                                        "Condition": "{Session.FastestLapTyres, Converter=StringEquals, Parameter=Intermediate}",
+                                        "Property": "Foreground",
+                                        "Value": "#006e1d"
+                                    },
+                                    {
+                                        "Condition": "{Session.FastestLapTyres, Converter=StringEquals, Parameter=Wet}",
+                                        "Property": "Foreground",
+                                        "Value": "#0003cc"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "BlockType": "stack",
+                "Orientation": "Horizontal",
+                "HorizontalAlignment": "Center",
+                "Height": 256,
+                "MarginTop": 48,
+                "Items": [
+                    {
+                        "BlockType": "image",
+                        "Source": "{Season.LeagueInfo.LeagueLogo}",
+                        "Width": 256,
+                        "HorizontalAlignment": "Left",
+                        "VerticalAlignment": "Center",
+                    },
+                    {
+                        "BlockType": "text",
+                        "Source": "X",
+                        "FontSize": 32,
+                        "FontName": "{FontNameBlack}",
+                        "VerticalAlignment": "Center"
+                    },
+                    {
+                        "BlockType": "image",
+                        "Source": "new_transparent.png",
+                        "Height": 256
+                    }
+                ]
+            }
+        ]
+    }
+}

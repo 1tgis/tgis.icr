@@ -1,0 +1,8 @@
+{
+    "Id": "en-GB",
+    "Name": "English",
+    "Strings": {
+        "Race": "Race",
+        "Qualification": "Quali"
+    }
+}

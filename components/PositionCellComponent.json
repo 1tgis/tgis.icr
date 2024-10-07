@@ -1,0 +1,21 @@
+{
+    "ComponentName": "PositionCellComponent",
+    "BlockType": "text",
+    "Source": "<position>",
+    "Width": 65,
+    "Height": 100,
+    "BackgroundImage": "position_bg.png",
+    "FontName": "{FontNameBlack}",
+    "FontSize": 40,
+    "Foreground": "000000",
+    "TextOptions": {
+        "HorizontalAlignment": "Center"
+    },
+    "Triggers": [
+        {
+            "Condition": "<position, Converter=StringEquals, Parameter=->",
+            "Property": "Source",
+            "Value": "/"
+        }
+    ]
+}
