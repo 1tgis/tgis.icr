@@ -15,13 +15,10 @@
                     //flag
                     {
                         "BlockType": "image",
-                        "Height": 48,
+                        "Height": 64,
                         "MarginRight": 12,
                         "VerticalAlignment": "Center",
-                        "ImageOptions": {
-                            "Path": "{DriverInfo.Driver.Nationality.LogotypePath}",
-                            "VerticalAlignment": "Center"
-                        }
+                        "Source": "{DriverInfo.Team.LogotypePath}"
                     },
 
                     //name
@@ -29,10 +26,11 @@
                         "BlockType": "text",
                         "MaxWidth": 600,
                         "MarginLeft": 8,
+                        "Foreground": "{DriverInfo.Team.Color}",
                         "Source": "{DriverInfo.Driver.Name}",
                         "HorizontalAlignment": "Left",
                         "VerticalAlignment": "Center",
-                        "FontName": "{FontNameDefault}",
+                        "FontName": "{FontNameWide}",
                         "FontSize": 56
                     },
 
@@ -71,11 +69,11 @@
                         "MaxWidth": 600,
                         "MarginLeft": 16,
                         "Source": "#{DriverInfo.Driver.RaceNumber}",
-                        "Foreground": "#444444",
-                        "HorizontalAlignment": "Left",
-                        "VerticalAlignment": "Center",
-                        "FontName": "{FontNameDefault}",
-                        "FontSize": 56
+                        "Foreground": "#D4D4D4",
+                        "HorizontalAlignment": "Center",
+                        "VerticalAlignment": "Top",
+                        "FontName": "{FontNameItalic}",
+                        "FontSize": 36
                     }
                 ]
             }
