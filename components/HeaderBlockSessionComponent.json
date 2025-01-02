@@ -27,13 +27,13 @@
                                 {
                                     "BlockType": "text",
                                     "Name": "txtLeagueName",
-                                    "Source": "{Season.LeagueInfo.LeagueName}",
+                                    "Source": "{Season.LeagueInfo.LeagueName, Converter=StringToUpperString}",
                                     "FontName": "{FontNameWide}",
                                     "FontSize": 20
                                 },
                                 {
                                     "BlockType": "text",
-                                    "Source": " // {Season.Name}",
+                                    "Source": " // {Season.Name, Converter=StringToUpperString}",
                                     "VerticalAlignment": "Center",
                                     "FontName": "{FontNameWide}",
                                     "FontSize": 20,
@@ -51,7 +51,7 @@
                             "Items": [
                                 {
                                     "BlockType": "text",
-                                    "Source": "[{Session.SessionType}]",
+                                    "Source": "[{Session.SessionType, Converter=StringToUpperString}]",
                                     "FontName": "{FontNameWide}",
                                     "FontSize": 50
                                 },
@@ -59,7 +59,7 @@
                                 {
                                     "BlockType": "text",
                                     "RenderIf": false,
-                                    "Source": "{Session.TotalLaps} [laps]",
+                                    "Source": "{Session.TotalLaps} [LAPS]",
                                     "FontName": "{FontNameWide}",
                                     "FontSize": 18,
                                     "Triggers": [
@@ -75,7 +75,7 @@
                                 {
                                     "BlockType": "text",
                                     "RenderIf": false,
-                                    "Source": "{Session.SessionDurationMinutes} [min].",
+                                    "Source": "{Session.SessionDurationMinutes} [MIN.].",
                                     "FontName": "{FontNameWide}",
                                     "FontSize": 18,
                                     "Triggers": [
@@ -119,7 +119,7 @@
                             "BlockType": "text",
                             "MarginLeft": 12,
                             "VerticalAlignment": "Center",
-                            "Source": "{Session.Track.CountryName}",
+                            "Source": "{Session.Track.CountryName, Converter=StringToUpperString}",
                             "FontName": "{FontNameWide}",
                             "FontSize": 80,
                             "PaddingBottom": 10,
@@ -129,7 +129,7 @@
                             "BlockType": "text",
                             "VerticalAlignment": "Center",
                             "HorizontalAlignment": "Center",
-                            "Source": "{Session.Track.CircuitName}",
+                            "Source": "{Session.Track.CircuitName, Converter=StringToUpperString}",
                             "FontName": "{FontNameWide}",
                             "PaddingTop": 0,
                             "FontSize": 18,

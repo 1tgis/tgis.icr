@@ -44,7 +44,7 @@
                             "MaxWidth": 800,
                             "MarginLeft": 8,
                             "Height": 60,
-                            "Source": "{Item.Driver.Name}",
+                            "Source": "{Item.Driver.Name, Converter=StringToUpperString}",
                             "HorizontalAlignment": "Left",
                             "VerticalAlignment": "Center",
                             "FontName": "{FontNameWide}",
