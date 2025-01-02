@@ -88,11 +88,12 @@
                         "Height": 68,
                         "Orientation": "Horizontal",
                         "VerticalAlignment": "Center",
-                        "Background": "#000000",
+                        "Background": "#80000000",
                         "ColorizeBackground": {
                             "Enabled": true,
                             "Color": "{Item.Team.Color}",
-                            "BlendPercentage": 100
+                            "BlendPercentage": 70,
+                            "ColorBlendingMode": "Screen",
                         },
                         "Triggers": [
                             {
@@ -134,7 +135,7 @@
                                         "BlockType": "text",
                                         "HorizontalAlignment": "Center",
                                         "VerticalAlignment": "Center",
-                                        "Foreground": "{Item.Team.SecondaryColor}",
+                                        "Foreground": "{Foreground}",
                                         "Source": "{Item.Team.Name}",
                                         "FontSize": 28
                                     }
@@ -175,12 +176,12 @@
                                                         "BlockType": "text",
                                                         "MaxWidth": 520,
                                                         "MarginLeft": 8,
-                                                        "Source": "{Item.Driver.Name}",
+                                                        "Source": "{Item.Driver.Name, Converter=StringToUpperString}",
                                                         "HorizontalAlignment": "Left",
                                                         "VerticalAlignment": "Center",
-                                                        "FontName": "{FontNameDefault}",
-                                                        "FontSize": 40,
-                                                        "Foreground": "{Item.Team.SecondaryColor}"
+                                                        "FontName": "{FontNameWide}",
+                                                        "FontSize": 36,
+                                                        "Foreground": "{Foreground}"
                                                     }
                                                 ]
                                             }
