@@ -18,7 +18,7 @@
                     "Items": [
                         {
                             "BlockType": "text",
-                            "Source": "{Season.LeagueInfo.LeagueName, Converter=LowerCaseToUpperCase}",
+                            "Source": "{Season.LeagueInfo.LeagueName, Converter=StringToUpperCase}",
                             "FontName": "{FontNameWide}",
                             "FontSize": 20
                         },
