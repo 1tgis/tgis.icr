@@ -1,8 +1,8 @@
 {
     "ThemeId": "tgis.icr",
-    "Name": "Intercontinental Racing League",
+    "Name": "Intercontinental Racing League Theme",
     "Author": "tgis",
     "Description": "Theme for Racing League ICR",   
-    "Version": "2.1"	,
+    "Version": "2.1.1"	,
     "DefaultLocalizationId": "en-GB"
 }
