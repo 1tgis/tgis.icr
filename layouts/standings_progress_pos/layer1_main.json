@@ -145,50 +145,31 @@
                                 "Source": "{Item.RaceMajorPositionString}",
                                 "HorizontalAlignment": "Left",
                                 "TextOptions": {
-                                    "FontName": "{FontNameDefault}",
+                                    "FontName": "{FontNameBold}",
                                     "FontSize": 34,
                                     "HorizontalAlignment": "Center",
                                     "Foreground": "{SeasonProgressPositionDefaultForeground}"
                                 },
                                 "Triggers": [
-                                    {
-                                        "Condition": "{Item.IsRaceMajorClassified, Converter=BoolReverse}",
-                                        "Setters": [
-                                            {
-                                                "Property": "FontSize",
-                                                "Value": 22
-                                            },
-                                            {
-                                                "Property": "Foreground",
-                                                "Value": "{SeasonProgressPositionNotClassifiedForeground}"
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "Condition": "{Item.RaceMajorPosition, Converter=NumberLess, Parameter=11}",
-                                        "Setters": [
-                                            {
-                                                "Property": "Foreground",
-                                                "Value": "{SeasonProgressPositionTop10Foreground}"
-                                            }
-                                        ]
-                                    },
                                     // {
-                                    //     "Condition": "{Item.Position, Converter=NumberLess, Parameter=4}",
-                                    //     "Setters":
-                                    //     [
+                                    //     "Condition": "{Item.IsRaceMajorParticipied, Converter=BoolReverse}",
+                                    //     "Setters": [
                                     //         {
-                                    //             "Property": "Foreground",
-                                    //             "Value": "#DDDD55"
+                                    //             "Property": "Source",
+                                    //             "Value": ""
                                     //         }
                                     //     ]
                                     // },
                                     {
-                                        "Condition": "{Item.RaceMajorPosition, Converter=NumberEquals, Parameter=1}",
+                                        "Condition": "{Item.IsMajorQualPole}",
                                         "Setters": [
                                             {
+                                                "Property": "Background",
+                                                "Value": "{SeasonProgressPointsPoleBackground}"
+                                            },
+                                            {
                                                 "Property": "Foreground",
-                                                "Value": "{SeasonProgressPositionTop1Foregound}"
+                                                "Value": "#000000"
                                             }
                                         ]
                                     },
@@ -202,11 +183,20 @@
                                         ]
                                     },
                                     {
-                                        "Condition": "{Item.IsMajorQualPole}",
+                                        "Condition": "{Item.Points, Converter=NumberEquals, Parameter=0}",
                                         "Setters": [
                                             {
-                                                "Property": "Background",
-                                                "Value": "{SeasonProgressPointsPoleBackground}"
+                                                "Property": "Foreground",
+                                                "Value": "{SeasonProgressPointsZeroForeground}"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "Condition": "{Item.Points, Converter=NumberGreater, Parameter=149}",
+                                        "Setters": [
+                                            {
+                                                "Property": "Foreground",
+                                                "Value": "{SeasonProgressPointsTopForeground}"
                                             }
                                         ]
                                     },

@@ -144,39 +144,21 @@
                                 "Source": "{Item.PointsString}",
                                 "HorizontalAlignment": "Left",
                                 "TextOptions": {
-                                    "FontName": "{FontNameWide}",
+                                    "FontName": "{FontNameBold}",
                                     "FontSize": 34,
                                     "HorizontalAlignment": "Center",
                                     "Foreground": "{SeasonProgressPointsForeground}"
                                 },
                                 "Triggers": [
-                                    {
-                                        "Condition": "{Item.IsRaceMajorParticipied, Converter=BoolReverse}",
-                                        "Setters": [
-                                            {
-                                                "Property": "Source",
-                                                "Value": ""
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "Condition": "{Item.Points, Converter=NumberEquals, Parameter=0}",
-                                        "Setters": [
-                                            {
-                                                "Property": "Foreground",
-                                                "Value": "{SeasonProgressPointsZeroForeground}"
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "Condition": "{Item.Points, Converter=NumberGreater, Parameter=149}",
-                                        "Setters": [
-                                            {
-                                                "Property": "Foreground",
-                                                "Value": "{SeasonProgressPointsTopForeground}"
-                                            }
-                                        ]
-                                    },
+                                    // {
+                                    //     "Condition": "{Item.IsRaceMajorParticipied, Converter=BoolReverse}",
+                                    //     "Setters": [
+                                    //         {
+                                    //             "Property": "Source",
+                                    //             "Value": ""
+                                    //         }
+                                    //     ]
+                                    // },
                                     {
                                         "Condition": "{Item.IsMajorQualPole}",
                                         "Setters": [
@@ -196,6 +178,24 @@
                                             {
                                                 "Property": "Foreground",
                                                 "Value": "{SeasonProgressPointsFastestLapForeground}"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "Condition": "{Item.Points, Converter=NumberEquals, Parameter=0}",
+                                        "Setters": [
+                                            {
+                                                "Property": "Foreground",
+                                                "Value": "{SeasonProgressPointsZeroForeground}"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "Condition": "{Item.Points, Converter=NumberGreater, Parameter=149}",
+                                        "Setters": [
+                                            {
+                                                "Property": "Foreground",
+                                                "Value": "{SeasonProgressPointsTopForeground}"
                                             }
                                         ]
                                     },
