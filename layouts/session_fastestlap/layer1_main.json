@@ -41,16 +41,16 @@
                                 "VerticalAlignment": "Bottom",
                                 "HorizontalAlignment": "Center",
                                 "Foreground": "#FFFF00",
-                                "FontSize": 32
+                                "FontSize": 26
                             },
                             {
                                 "Name": "txt1",
                                 "BlockType": "text",
                                 "FontName": "{FontNameWide}",
-                                "Source": " {Session.Track.CountryName, Converter=StringToUpperString}",
+                                "Source": " [{Session.Track.CircuitName, Converter=StringToUpperString}]",
                                 "VerticalAlignment": "Bottom",
                                 "Foreground": "#FFFFFF",
-                                "FontSize": 32
+                                "FontSize": 26
                             },
                         ]
                     }

@@ -119,7 +119,7 @@
                             "BlockType": "text",
                             "MarginLeft": 12,
                             "VerticalAlignment": "Center",
-                            "Source": "{Session.Track.CountryName, Converter=StringToUpperString}",
+                            "Source": "[{Session.Track.CountryName, Converter=StringToUpperString}]",
                             "FontName": "{FontNameWide}",
                             "FontSize": 80,
                             "PaddingBottom": 10,
